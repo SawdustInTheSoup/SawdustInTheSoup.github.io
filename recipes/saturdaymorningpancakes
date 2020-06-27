@@ -1,0 +1,61 @@
+<!DOCKTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sawdust in the Soup</title>
+		<style>
+			body {
+				background-color:2B7E9A;
+				color:011B24;
+				font-family: Candara, Arial, Sans-Serif;
+			}
+			
+			h1 {
+				text-align:center;
+				font-size:2.5em;
+			}
+			.header {
+				background-color:011B24;
+				color: 5AADC8;
+				padding: 15px 0px 35px 0px;
+				margin:auto;
+				width:85%;
+				height:8%;
+			}
+			.links {
+				background-color:03485F;
+				color: 5AADC8;
+				padding: 15px 0px 35px 0px;
+				margin:auto;
+				width:85%;
+				height:8%;
+				text-align:center;
+				font-size: 1.75em;
+			}
+			.links a:link, .links a:visited, .links a:hover, .links a:active, .links a:focus {
+				text-decoration:none;
+				font-weight:bold;
+				color:011B24;
+			}
+			#main-heading {
+				font-size:4em;
+				margin-top: auto;
+			{
+		</style>
+		<link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/SawdustInTheSoup/SawdustInTheSoup.github.io/master/favicon.png"/>
+	</head>
+	<body>
+		<div class = "header">
+			<h1 id="main-heading">Sawdust in the Soup</h1>
+		</div>
+		<table class = "links">
+			<tbody>
+				<tr>
+					<td><a href="https://sawdustinthesoup.github.io/recipes">Recipes</a></td>
+					<td><a href="https://sawdustinthesoup.github.io">Home</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<h1>Saturday Morning Pancakes</h1>
+	</body>
+</html>
