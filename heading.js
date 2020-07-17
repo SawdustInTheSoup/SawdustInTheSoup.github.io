@@ -11,3 +11,5 @@ var heading = "
 			</tbody>
 		</table>
 "
+headingEl = document.getElementById("theHeading");
+headingEl.innerHTML = "heading";
