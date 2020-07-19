@@ -1,5 +1,5 @@
-var heading = "
-		<div class = "header">
+headingEl = document.getElementById("theHeading");
+headingEl.innerHTML = "		<div class = "header">
 			<h1 id="main-heading">Sawdust in the Soup</h1>
 		</div>
 		<table class = "links">
@@ -9,7 +9,4 @@ var heading = "
 					<td><a href="https://sawdustinthesoup.github.io">Home</a></td>
 				</tr>
 			</tbody>
-		</table>
-"
-headingEl = document.getElementById("theHeading");
-headingEl.innerHTML = "heading";
+		</table>";
