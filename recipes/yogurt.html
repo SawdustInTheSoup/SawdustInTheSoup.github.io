@@ -3,46 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Sawdust in the Soup</title>
-		<style>
-			body {
-				background-color:2B7E9A;
-				color:011B24;
-				font-family: Candara, Arial, Sans-Serif;
-			}
-			
-			h1 {
-				text-align:center;
-				font-size:2.5em;
-			}
-			.header {
-				background-color:011B24;
-				color: 5AADC8;
-				padding: 15px 0px 35px 0px;
-				margin:auto;
-				width:85%;
-				height:8%;
-			}
-			.links {
-				background-color:03485F;
-				color: 5AADC8;
-				padding: 15px 0px 35px 0px;
-				margin:auto;
-				width:85%;
-				height:8%;
-				text-align:center;
-				font-size: 1.75em;
-			}
-			.links a:link, .links a:visited, .links a:hover, .links a:active, .links a:focus {
-				text-decoration:none;
-				font-weight:bold;
-				color:011B24;
-			}
-			#main-heading {
-				font-size:4em;
-				margin-top: auto;
-			{
-		</style>
 		<link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/SawdustInTheSoup/SawdustInTheSoup.github.io/master/favicon.png"/>
+		<link rel = "stylesheet" type = "text/css" href = "https://sawdustinthesoup.github.io/stylesheet.css"/>
+	<style>
+			#imageSlideshow {
+				background-color: 03485F;
+				padding: 8px 8px 8px 8px;
+			}
+			#image {
+				display:block;
+				margin:auto;
+			}
+			.captionStyle {
+				text-align: center;
+				color: 5AADC8;
+			}
+	</style>
 	</head>
 	<body>
 		<div class = "header">
@@ -57,5 +33,81 @@
 			</tbody>
 		</table>
 		<h1>Yogurt</h1>
+		
+		<p>We eat a lot of yogurt in our house, I make 2 quarts about every 3 days so we've done this many, many times. Yogurt is one of those things that is very simple but there are books written on it and many people have different ways they like to do it. I am just describing here the way we do it, no fancy equipment needed :)</p>
+		<h2>Supplies</h2>
+		<ul>
+		<li>an accurate food thermometer</li>
+		<li>little cooler & small towels</li>
+		<li>canning jars</li>
+		</ul>
+		<h2>Ingredients</h2>
+		<ul>
+		<li>2 quarts milk</li>
+		<li>1/2 cup plain yogurt (1/4 cup per quart of milk) The common advice is to start with a yogurt you like the taste of, just make sure it has live active cultures. We like Clover brand - but we like the yogurt we make from it better than the original.</li>
+		</ul>
+		
+		<h2>Directions</h2>
+		
+		<p>Measure out the 2 portions of plain yogurt that will be used as starter and set aside - it is best if these are out of the fridge to warm up a bit. <br>
+Warm the milk over low heat until it reaches 180. Milk scalds easily, careful with this step. This kills any other cultures in the milk so you only grow the yogurt cultures you add and also changes the milk protein a little.<br>
+Heat a kettle full of water, when it boils fill jars and put them in the little cooler. I reuse peanut butter sized jars for this - just make sure it's glass that is safe to put boiling water in. I use 4 of these but see what fits for you.<br>
+Pour the milk into the quart jars and let them cool to 120 degrees, stirring occasionally to prevent a skin from forming. You can set the jars into bowls of ice & water to speed up the cooling process but I would pull them out at 125 degrees so they don't get too cool.<br>
+		Stir 1/4 cup plain yogurt into each quart of milk, the temperature should be between 115 and 120 after that. Wrap each jar in a towel and set into the warm 'cooler'. Stuff the empty space with towels. This prevents the boiling water jars from directly touching the yogurt and overheating the starter and also helps keep the temperature constant. <br>
+Set the cooler in a place where it won't get bumped and the temperature doesn't fluctuate.<br>
+8 hours later put the jars into the fridge to cool. The window of time people use is anywhere between 5 and 10 hours, you can adjust this to play with the tanginess and firmness of the final product. They should be firmish at this point with maybe a little whey. When they are cooled I give it a gentle stir.</p>
+		<br>
+		<p>Notes: Joy of Cooking has a good section on yogurt for further reading. As I said though, there are a lot of people with a lot of theories about yogurt making.
+You can also buy yogurt starter though I haven't tried this yet. Maybe one of these days. I use our yogurt to start the next batch and so on and so on. After doing this for about 3 months I noticed the flavor had gotten tangier than we liked so I started again with a store bought yogurt. We're seeing how long it goes this time, theoretically I can do this indefinitely. </p>
+	
+	<div id = "imageSlideshow">
+	<p class = "captionStyle">Click to scroll images.</p>
+	<img id = "image">
+	<p id = "caption" class = "captionStyle"></p>
+	</div>
+	
+	<script>
+	var image = function(src, caption, width) {
+		this.src = src;
+		this.caption = caption;
+		this.width = width;
+	}
+	
+	var images = [new image("https://sawdustinthesoup.github.io/recipes/Yogurt%201.jpg", "Just before going in the 'cooler'.", 300), 
+	new image("https://sawdustinthesoup.github.io/recipes/Yougurt%202.JPG", "The 'cooler'.", 500),
+	new image("https://sawdustinthesoup.github.io/recipes/Yogurt%203.jpg", "Cooling in an ice bath.", 450)];
+	
+	var curImage = 0 - 1;
+	var captionEl = document.getElementById("caption");
+	var imageEl = document.getElementById("image");
+	var slideshowEl = document.getElementById("imageSlideshow");
+	
+	var nextImage = function() {
+		
+		curImage++;
+		
+		if (curImage > images.length - 1) {
+			curImage = 0;
+		}
+		captionEl.textContent = images[curImage].caption;
+		
+		imageEl.src = images[curImage].src;
+		imageEl.width = images[curImage].width;
+	}
+	
+	var heigestWidth = 0;
+	for (var i = 0; i < images.length; i++) {
+		if (images[i].width > heigestWidth) {
+			heigestWidth = images[i].width;
+		}
+	}
+	
+	slideshowEl.style.width = heigestWidth;
+	
+	nextImage();
+	
+	imageEl.addEventListener("click", nextImage);
+	
+	</script>
 	</body>
 </html>
