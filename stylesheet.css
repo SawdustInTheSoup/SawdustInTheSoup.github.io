@@ -46,3 +46,15 @@
 				font-size:4em;
 				margin-top: auto;
 			{
+			#imageSlideshow {
+				background-color: 03485F;
+				padding: 8px 8px 8px 8px;
+			}
+			#image {
+				display:block;
+				margin:auto;
+			}
+			.captionStyle {
+				text-align: center;
+				color: 5AADC8;
+			}
